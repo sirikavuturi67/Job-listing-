@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Listing Protocol</title>
+  <link rel="stylesheet" href="style.css">  
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">
+      <img src="https://img.icons8.com/ios-filled/50/4CAF50/briefcase.png" alt="Job Icon">
+      <h1>Job Listing Protocol</h1>
+    </div>
+    <div class="nav-buttons">
+      <button id="homeBtn">Home</button>
+      <button id="filterBtn">Filters</button>
+      <button id="loginSignupBtn">Login/Signup</button>
+    </div>
+  </header>
+
+  <!-- Filter Section -->
+  <div id="filterSection" class="filter-container" style="display: none;">
+    <h2>Filter Jobs</h2>
+    <label>Company:
+      <select id="filterCompany">
+        <option value="">All Companies</option>
+        <option value="Tech Corp">Tech Corp</option>
+        <option value="DataX">DataX</option>
+        <option value="Webify">Webify</option>
+        <option value="AI Labs">AI Labs</option>
+      </select>
+    </label>
+    <label>Job Role:
+      <select id="filterJobRole">
+        <option value="">All Roles</option>
+        <option value="Software Engineer">Software Engineer</option>
+        <option value="Data Scientist">Data Scientist</option>
+        <option value="Web Developer">Web Developer</option>
+        <option value="AI Researcher">AI Researcher</option>
+        <option value="Data Analyst">Data Analyst</option>
+      </select>
+    </label>
+    <label>Salary:
+      <input type="number" id="filterSalary" placeholder="Minimum Salary">
+    </label>
+    <label>Work From Home:
+      <input type="checkbox" id="filterWFH"> Yes
+    </label>
+    <label>Location:
+      <select id="filterLocation">
+        <option value="">All Locations</option>
+        <option value="New York">New York</option>
+        <option value="San Francisco">San Francisco</option>
+        <option value="Remote">Remote</option>
+        <option value="Boston">Boston</option>
+        <option value="Chicago">Chicago</option>
+      </select>
+    </label>
+    <button id="applyFiltersBtn">Apply Filters</button>
+  </div>
+
+  <!-- Job Listings Section -->
+  <div class="job-listings">
+    <h2>Available Jobs</h2>
+    <div id="jobList" class="job-list">
+      <!-- Jobs will be populated here by JavaScript -->
+    </div>
+  </div>
+
+  <!-- Modal for Login/Signup -->
+  <div id="loginSignupModal" class="modal-overlay" style="display: none;">
+    <div class="modal-content">
+      <h2>Login/Signup</h2>
+      <input type="text" id="username" placeholder="Username">
+      <input type="password" id="password" placeholder="Password">
+      <button id="submitBtn">Submit</button>
+      <button id="cancelBtn" class="cancel-btn">Cancel</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
